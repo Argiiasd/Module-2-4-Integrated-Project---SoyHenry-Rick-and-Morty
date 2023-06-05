@@ -1,0 +1,11 @@
+.searchInput{
+    width: 20rem;
+    height: 3rem;
+    border-top-left-radius:20px;
+    border-bottom-left-radius: 20px;
+}
+
+.agregarBar{
+    height: 3rem;
+    border:none;
+}

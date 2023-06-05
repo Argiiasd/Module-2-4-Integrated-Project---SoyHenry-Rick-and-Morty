@@ -1,0 +1,69 @@
+.divTarjeta {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.4rem solid #24325FFF;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #17120dc3;
+    width: 325px;
+    height: 570px;
+    padding-top: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.divTarjeta:hover {
+    transform: scale(1.1);
+}
+
+.divTarjeta {
+    .closeBtn {
+        
+    }
+}
+
+.divTarjeta img {
+    border-radius: 50%;
+    width: 12rem;
+    box-shadow: 0 0 10px #97ce4c;
+    position: relative;
+    margin-top: 2.4rem;
+    margin-left: 1rem;
+}
+
+.divTarjeta {
+    .info {
+        
+        font-size: 40px;
+        margin: 0px;
+        /* padding-top: 2rem; */
+        background: none;
+        border: none
+    }
+    .linkStl{
+        text-decoration: none;
+        color:white;
+        text-shadow: 0 0 10px #FB6467FF;
+        
+    }
+
+
+}
+
+.divTarjeta h2 {
+    color: aliceblue;
+    font-size: 25px;
+    margin: 0px;
+    padding-bottom: 3rem;
+}
+
+.divGif {
+    background-image: url('https://media.tenor.com/BgR83Df82t0AAAAi/portal-rick-and-morty.gif');
+    background-size: cover;
+    width: 16rem;
+    height: 16rem;
+    padding-bottom: 1rem;
+}
