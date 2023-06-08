@@ -1,6 +1,9 @@
-import { ADD_FAV, REMOVE_FAV } from "./actions";
+import { ADD_FAV, FILTER, ORDER, REMOVE_FAV } from "./actions";
 
-let initialState = {myFavorites: []};
+let initialState = {
+    myFavorites: [],
+    allCharacters:[]
+};
 
 export default function rootReducer(state=initialState, action){
     
@@ -8,18 +11,29 @@ export default function rootReducer(state=initialState, action){
         case ADD_FAV:
             return{
                 ...state,
-                myFavorites:[...state.myFavorites, action.payload]
+                myFavorites:[...state.allCharacters, action.payload],
+                allCharacters:[...state.myFavorites, action.payload]
             }
         case REMOVE_FAV:
             return{
                 ...state,
                 myFavorites: state.myFavorites.filter((character) => character.id !== Number(action.payload))
             }
-
+        case FILTER:
+            const filteredCharacters = state.allCharacters.filter(character => character.gender === action.payload);
+            return{
+                ...state,
+                myFavorites: filteredCharacters
+            }
+        case ORDER:
+            return{
+                ...state,
+                myFavorites:
+                    action.payload === "A" ? state.allCharacters.sort((a, b) => a.id - b.id) : state.allCharacters.sort((a, b) => b.id - a.id)
+            }
         default:
             return{
                 ...state
             }
     }
-
 }

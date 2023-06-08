@@ -38,7 +38,7 @@ function Card(props) {
       </div>
 
       <button className={styles.info}>
-        <Link to={`/detail/${character.id}`} className={styles.linkStl} >
+        <Link to={`/detail/${character.id}`} className={styles.linkStl}>
           <h3 className="card-name">{character.name}</h3>
         </Link>
       </button>
