@@ -3,9 +3,16 @@
     height: 3rem;
     border-top-left-radius:20px;
     border-bottom-left-radius: 20px;
+    border: none;
 }
 
 .agregarBar{
+    color: black;
     height: 3rem;
-    border:none;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: white;
+    cursor: pointer;
+    padding-right: 1rem;
 }

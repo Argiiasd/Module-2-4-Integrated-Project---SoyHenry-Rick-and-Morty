@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 const Footer = ()=>{
     return(
         <footer className={styles.footer}>
-            <p>La serie sigue las desventuras de un científico, Rick Sanchez, y su fácilmente influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos.</p>
+            <p>The series follows the misadventures of alcoholic scientist Rick and his overly nervous grandson Morty, who split their time between domestic family life and intergalactic travel.</p>
         </footer>
     )
 }
