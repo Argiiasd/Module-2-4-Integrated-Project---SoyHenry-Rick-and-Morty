@@ -17,29 +17,44 @@
 .RyMImg{
     width: 15rem;
     height: auto;
-    margin-left: 3rem;   
+    margin-left: 5rem;   
 }
 
 /* second div, searchBar */
 .searchBarDiv{
     width: 33.33%;
     text-align: center;
+    
 }
 
 /* third div, buttons */
 .buttonsDiv{
     width: 33.33%;
     text-align: right;
+    
+}
+.randomButtonDiv{
+    display: inline-block;
+    width: auto;
+    text-align: left;
+}
+.randomButtonDiv button{
+    
 }
 .navButtons button{
     color: white;
     margin: 1rem;
     border: none;
     background: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 3rem;
 }
 .navLinkButton{
     margin: 1rem;
     text-decoration: none;
     color: white;
+    font-size: 15px;
 }
+
 

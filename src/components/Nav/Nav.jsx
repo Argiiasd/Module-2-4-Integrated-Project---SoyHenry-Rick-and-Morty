@@ -17,8 +17,11 @@ const Nav = ({onSearch, setAccess, random}) => {
                 <SearchBar onSearch={onSearch} />
             </div>
             <div className={styles.buttonsDiv}>
+
                 <div className={styles.navButtons}>
-                    <button onClick={random}>Random</button>
+                    <div className={styles.randomButtonDiv}>
+                        <button onClick={random}>Add Random</button>
+                    </div>
                     <NavLink to='/about' className={styles.navLinkButton}>About</NavLink>
                     <NavLink to='/home' className={styles.navLinkButton}>Home</NavLink>
                     <NavLink to='/favorites' className={styles.navLinkButton}>Favorites</NavLink>

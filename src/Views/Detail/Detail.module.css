@@ -1,22 +1,19 @@
 .container{
     display: flex;
-    flex-wrap: wrap;
-    position: fixed;
+    flex-wrap: nowrap;
+    width: 60%;
     justify-content: flex-start;
     background-image: url('https://images3.alphacoders.com/130/1303834.jpg');
     background-size: cover;
     margin-top: 10rem;
-    margin-left: 30rem;
-    margin-right: 30rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
-    padding-bottom: 2rem;
-
-    
-
-
+    padding-bottom: 4rem;
 }
+
 .container img{
     border-radius: 50%;
     width: 17rem;
@@ -24,6 +21,7 @@
     position: relative;
     margin-top: 5.6rem;
     margin-left: 2.5rem;
+    margin-right: 1rem;
 
 }
 
