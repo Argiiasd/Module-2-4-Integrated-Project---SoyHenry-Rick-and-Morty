@@ -15,36 +15,40 @@ import ErrorPage from './Views/ErrorPage/ErrorPage';
 function App() {
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);//estado local Access
-   const EMAIL = "mateo.p.giacosa@gmail.com"
-   const PASSWORD = "mateo1"
    const navigate = useNavigate();
    const location = useLocation();
    const logInRoute = location.pathname === '/';
    
-   function searchHandler(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-         if (data.name) {
-            setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            navigate('/error');
+   async function searchHandler(id) {
+      try {
+        const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+        if (data.name) {
+          setCharacters(oldChars => [...oldChars, data]);
          }
-      })
-      .catch(()=>{
-         navigate('/error');
-      });
-   }
+      } catch (error) {
+        navigate('/error');
+      }
+    }
 
    function closeHandler(id) {
       let deleted = characters.filter(character => character.id !== Number(id))
       setCharacters(deleted);
    }
-
-   const login = (userData) => {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
+   
+   async function login(userData) {
+      try {
+        const { email, password } = userData;
+        const URL = 'http://localhost:3001/rickandmorty/login/';
+        const { data } = await axios.get(URL, { params: { email, password } });
+        const { access } = data;
+        setAccess(data);
+        access && navigate('/home');
+      } catch (error) {
+        console.log("No se ha podido iniciar sesión")
       }
-   }
+    }
+    
+
    useEffect(() => {
       !access && navigate('/');
    }, [access, navigate]);
